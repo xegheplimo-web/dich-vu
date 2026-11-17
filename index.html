@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dọn dữ liệu Excel &amp; tự động hoá việc lặp — bảng giá và demo</title>
+<meta name="description" content="Dịch vụ làm sạch dữ liệu Excel, thu thập dữ liệu công khai và tự động hoá việc lặp. Giá theo việc, có demo chạy thật và mã nguồn công khai để kiểm chứng.">
+<style>
+  :root{--ink:#15181d;--muted:#5b6472;--line:#dfe4ea;--soft:#f5f7fa;--accent:#0f6bff}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+  header{padding:56px 0 32px;border-bottom:1px solid var(--line)}
+  h1{font-size:clamp(26px,4vw,40px);line-height:1.2;margin:0 0 14px;letter-spacing:-.4px}
+  .lead{font-size:clamp(16px,2vw,19px);color:var(--muted);margin:0 0 24px;max-width:62ch}
+  .cta{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:12px 20px;border-radius:8px;font-weight:600}
+  .cta.ghost{background:#fff;color:var(--ink);border:1px solid var(--ink);margin-left:10px}
+  section{padding:44px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:clamp(20px,2.6vw,26px);margin:0 0 18px}
+  h3{font-size:17px;margin:0 0 6px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .card{border:1px solid var(--line);border-radius:12px;padding:20px}
+  .card .price{font-size:26px;font-weight:700;margin:6px 0 10px}
+  .tag{display:inline-block;font-size:12px;background:var(--soft);color:#3c4757;padding:3px 9px;border-radius:999px;margin-bottom:10px}
+  ul{margin:8px 0 0;padding-left:20px}
+  li{margin:4px 0}
+  .offer{border:2px solid var(--ink);border-radius:12px;padding:20px;margin-top:18px}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left;vertical-align:top}
+  th{background:var(--soft)}
+  .muted{color:var(--muted);font-size:14px}
+  video{width:100%;max-width:520px;border:1px solid var(--line);border-radius:10px;display:block}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+  @media(max-width:700px){.two{grid-template-columns:1fr}}
+  code{background:var(--soft);padding:2px 6px;border-radius:5px;font-size:13px}
+  footer{padding:36px 0 64px;color:var(--muted);font-size:14px}
+  a{color:var(--accent)}
+  .kpi{display:flex;gap:26px;flex-wrap:wrap;margin:14px 0 0}
+  .kpi div{min-width:150px}
+  .kpi b{display:block;font-size:22px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Dọn dữ liệu Excel &amp; tự động hoá việc lặp —<br>giá theo việc, có demo để kiểm trước khi thuê</h1>
+    <p class="lead">Tôi nhận ba việc: làm sạch file Excel xuất từ phần mềm cũ, thu thập dữ liệu từ nguồn công khai, và đóng gói một việc lặp hằng ngày thành công cụ chạy một lệnh. Mọi con số dưới đây đo từ bộ demo thật, mã nguồn mở công khai.</p>
+    <a class="cta" href="#gia">Xem bảng giá</a>
+    <a class="cta ghost" href="#bang-chung">Xem bằng chứng</a>
+  </div>
+</header>
+
+<section id="gia">
+  <div class="wrap">
+    <h2>Bảng giá</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Dữ liệu công khai</span>
+        <h3>G1 · Bảng dữ liệu sạch</h3>
+        <div class="price">500.000đ</div>
+        <ul>
+          <li>Thu thập từ nguồn công khai, tôn trọng <code>robots.txt</code></li>
+          <li>Excel/Sheets dùng được ngay: cột rõ, không trùng, <b>có cột nguồn</b></li>
+          <li>Tối đa 5.000 dòng · giao 2–3 ngày làm việc</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Hay được chọn</span>
+        <h3>G2 · Làm sạch + báo cáo</h3>
+        <div class="price">800.000đ</div>
+        <ul>
+          <li>File bán hàng/tồn kho xuất từ phần mềm cũ</li>
+          <li>Báo cáo nhiều sheet: theo ngày, theo sản phẩm</li>
+          <li><b>Danh sách dòng bị loại kèm lý do</b> — không im lặng bỏ dữ liệu</li>
+          <li>Giao 2 ngày làm việc</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Quy trình</span>
+        <h3>G3 · Tự động hoá 1 việc lặp</h3>
+        <div class="price">1.500.000đ</div>
+        <ul>
+          <li>Nhập liệu, tải báo cáo định kỳ, đối chiếu đơn, gửi nhắc</li>
+          <li>Chạy trên máy bạn, có README + lệnh chạy lại</li>
+          <li>Giao 3–5 ngày · <b>14 ngày sửa lỗi miễn phí</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="offer">
+      <b>Mở bán 3 suất đầu: 199.000đ</b> — 1 file Excel ≤500 dòng: làm sạch, bỏ trùng, giao trong 1 ngày, 1 lần sửa.
+      Giá này để lấy nhận xét thật cho 3 khách đầu; sau đó về bảng giá trên.
+      <div class="muted">Suất 0đ chỉ dành cho người quen đã biết việc làm — không mở công khai.</div>
+    </div>
+  </div>
+</section>
+
+<section id="bang-chung">
+  <div class="wrap">
+    <h2>Bằng chứng — đo được, không phải lời hứa</h2>
+    <div class="kpi">
+      <div><b>243 → 207</b><span class="muted">dòng thô → đơn hợp lệ; loại 22 dòng có ghi lý do</span></div>
+      <div><b>17 test</b><span class="muted">cho công cụ thu thập dữ liệu, chạy offline</span></div>
+      <div><b>6 tổ hợp</b><span class="muted">CI: Windows/Linux × Python 3.11–3.13</span></div>
+      <div><b>2,6 giây</b><span class="muted">20 bản ghi / 1 trang, có delay giữa request</span></div>
+    </div>
+
+    <div class="two" style="margin-top:24px">
+      <div>
+        <h3>Demo 1 — làm sạch dữ liệu bán hàng</h3>
+        <video src="demo-report-demo.mp4" controls muted loop playsinline poster=""></video>
+        <p class="muted">File gốc 243 dòng có lỗi ngày/giá/trùng đơn → báo cáo 4 sheet + sheet <code>Issues</code> ghi từng dòng bị loại và lý do.</p>
+      </div>
+      <div>
+        <h3>Demo 2 — thu thập dữ liệu công khai</h3>
+        <video src="demo-scrape-demo.mp4" controls muted loop playsinline poster=""></video>
+        <p class="muted">Kiểm <code>robots.txt</code> trước khi request, backoff khi bị chặn, xuất CSV có cột nguồn.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:22px">Mã nguồn công khai: <a href="https://github.com/xegheplimo-web/scrape-demo">github.com/xegheplimo-web/scrape-demo</a> (MIT) — clone về chạy <code>pytest</code> là thấy 17 test xanh, không cần mạng.</p>
+    <p><a href="offers.pdf">Tải bảng giá dạng PDF (1 trang A4)</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Cách làm việc</h2>
+    <table>
+      <tr><th>Bước</th><th>Nội dung</th></tr>
+      <tr><td>1</td><td>Bạn gửi mẫu dữ liệu/quy trình (che số liệu nhạy cảm). Tạm ứng 50% khi bắt đầu.</td></tr>
+      <tr><td>2</td><td>Tôi báo đúng 3 thứ: khối lượng, thời gian giao, giá — <b>không báo theo giờ</b>.</td></tr>
+      <tr><td>3</td><td>Làm trên bản mẫu nhỏ trước; bạn xem đúng ý rồi mới làm full.</td></tr>
+      <tr><td>4</td><td>Bàn giao kèm lệnh chạy lại + file kiểm chứng. Không đạt thì sửa, không tính thêm.</td></tr>
+    </table>
+
+    <h2 style="margin-top:34px">Không nhận</h2>
+    <ul>
+      <li>Dữ liệu sau đăng nhập, dữ liệu cá nhân trái phép</li>
+      <li>Vượt rào chống bot, phá ToS của bên thứ ba</li>
+      <li>Hứa rằng site nguồn sẽ không đổi giao diện (đổi thì sửa theo báo giá riêng)</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Câu hỏi hay gặp</h2>
+    <h3>Tôi ở xa, làm sao giao việc?</h3>
+    <p>Toàn bộ qua file: bạn gửi file, tôi trả file + video quay màn hình lúc chạy. Không cần gặp.</p>
+    <h3>Dữ liệu của tôi có bị lộ không?</h3>
+    <p>Tôi chỉ nhận file bạn gửi, không đăng ở đâu khác; xong việc bạn có thể yêu cầu xoá bản sao và tôi xác nhận bằng tin nhắn.</p>
+    <h3>Sửa bao nhiêu lần?</h3>
+    <p>2 lần cho G1/G2, 2 lần cho G3 trong phạm vi đã chốt; sau đó tính theo việc mới.</p>
+    <h3>Vì sao giá cố định mà không theo giờ?</h3>
+    <p>Vì bạn cần biết trước tổng tiền. Nếu khối lượng vượt phạm vi, tôi báo lại trước khi làm, không tự tăng.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>Liên hệ:</b> gửi mô tả ngắn + file mẫu tới <a href="mailto:attong39@gmail.com">attong39@gmail.com</a>.
+    Tôi trả lời trong ngày làm việc, kèm báo giá đúng 3 thứ: khối lượng, thời gian, giá.</p>
+    <p class="muted">Trang này không dùng cookie, không tracking, không form. Mã nguồn demo mở tại GitHub ở trên.</p>
+  </div>
+</footer>
+
+</body>
+</html>
